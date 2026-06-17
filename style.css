@@ -1,9 +1,23 @@
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #10002B;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
 }
 
 header{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 8%;
     left: 0px;
@@ -17,85 +31,95 @@ header{
   font-style: normal;
 }
 
+.main-titles{
+    gap: 0px;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
 
 .name{
-    position: absolute;
-    width: 555px;
-    height: 240px;
-    left: 70px;
-    top: 150px;
     color: white;
     font-family: 'Jersey 10';
     font-style: normal;
     font-weight: 400;
-    font-size: 90px;
-    line-height: 80px;
-
+    font-size: 150px;
+    line-height: 100px;
+    margin: 0;
 }
 
 .title{
-    position: absolute;
-    width: 600px;
-    height: 132px;
-    left: 65px;
-    top: 350px;
-
     font-family: 'JetBrains Mono';
     font-style: italic;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 60px;
     line-height: 66px;
+    margin: 0;
 
     color: #FFFFFF;
-
-
 }
 
-/*position: relative;
-width: 1440px;
-height: 1024px;
+.glowing-ellipse1{
+    position: absolute;
+    width: 364px;
+    height: 345px;
+    left: 73px;
+    top: 128px;
 
-background: #10002B;
+    background: #7B2CBF;
+    filter: blur(50px);
 
+    z-index: -1;
+}
 
-/* Lianis Silva Rodriguez */
-/*
-position: absolute;
-width: 555px;
-height: 240px;
-left: 65px;
-top: 177px;
+.glowing-ellipse2{
+    position: absolute;
+    width: 265px;
+    height: 263px;
+    left: 245px;
+    top: 286px;
 
-font-family: 'Jersey 10';
-font-style: normal;
-font-weight: 400;
-font-size: 150px;
-line-height: 120px;
-/* or 80% */
-/* 
-color: #FFFFFF;
+    background: #C692F4;
+    filter: blur(50px);
 
-*/
+    z-index: -1;
+}
 
-/* IT student & content creator */
-/*
-position: absolute;
-width: 600px;
-height: 132px;
-left: 65px;
-top: 417px;
+.about-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
 
-font-family: 'JetBrains Mono';
-font-style: italic;
-font-weight: 500;
-font-size: 50px;
-line-height: 66px;
+.section-titles{
+    color: white;
+    font-family: 'Jersey 10';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100px;
+    margin: 0px;
+}
 
-color: #FFFFFF;
+.paragraph{
+    font-family: 'JetBrains Mono';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: auto;
+    margin: 0;
+    max-width: 800px;
+    margin: 0px;
 
+    color: #FFFFFF;
+}
 
-
-
+footer{
+    background: #7B2CBF;
+    width: 100%;
+    height: 600px;
+}
 
 /* Menu Button */
 /*
@@ -116,3 +140,29 @@ left: 6px;
 top: -7px;
 
 background: url(.png);
+
+*/
+
+/* Ellipse 1 */
+/*
+position: absolute;
+width: 265px;
+height: 263px;
+left: 245px;
+top: 286px;
+
+background: #C692F4;
+filter: blur(50px);
+*/
+
+/* Ellipse 2 */
+/*
+position: absolute;
+width: 364px;
+height: 355px;
+left: 73px;
+top: 128px;
+
+background: #7B2CBF;
+filter: blur(50px);
+*/
