@@ -1,19 +1,19 @@
+
+html, body{
+    min-height: 100%;
+    margin: 0;
+}
+
 body{
     display: flex;
     flex-direction: column;
     background-color: #10002B;
-    min-height: 100vh;
 }
 
 main{
     display: flex;
     flex-direction: column;
-    flex: 1;
-}
-
-html, body{
-    height: 100%;
-    margin: 0;
+    flex: 1 0 auto;
 }
 
 header{
@@ -28,11 +28,13 @@ header{
     z-index: 10;
 }
 
+.first-section{
+    margin-bottom: 200px;
+}
 .menuButton{
     background: none;
     border: none;
     color: #FFFFFF;
-    font-size: 20px;
     margin: 10px;
     padding: 10px 10px 10px 10px;
 }
@@ -58,7 +60,9 @@ header{
     margin-top: 10px;
     margin-bottom: 10px;
     gap: 20px;
-    z-index: -1;
+    z-index: 2;
+
+    transition: transform 0.2s ease-in-out;
 }
 
 .contactMe, .linksButton{
@@ -69,6 +73,8 @@ header{
     padding: 6px 12px;
     border: none;
     box-shadow: 0px 4px 20px #C692F4;
+
+    transition: transform 0.25s ease-out;
 }
 
 .name{
@@ -86,9 +92,11 @@ header{
     font-family: 'JetBrains Mono';
     font-style: italic;
     font-weight: 500;
-    font-size: 60px;
-    line-height: 66px;
+    font-size: 40px;
+    line-height: 46px;
     margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     color: #FFFFFF;
 }
@@ -119,6 +127,82 @@ header{
     z-index: -1;
 }
 
+.image-fade-wrapper{
+    position: absolute;
+    right: 450px;
+    top: 100px;
+    width: 450px;
+    height: auto;
+    z-index: 0;
+}
+
+.faded-base-image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gradient-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(16, 0, 43, 0) 60%,
+        rgba(16, 0, 43, 1) 100%
+    );
+
+    pointer-events: none;
+}
+
+.portfolio-shortcut{
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    max-width: 300px;
+    height: auto;
+    right: 100px;
+    top: 300px;
+
+    transition: transform 0.25s ease-out;
+}
+
+.grow-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.25s ease-out;
+}
+
+.grow-link:hover .gorw-img{
+    transform: scale(1.08);
+}
+
+.folder-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.text-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+
 .about-section{
     display: flex;
     flex-direction: column;
@@ -133,15 +217,63 @@ header{
     align-items: center;
 }
 
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.contact-buttons{
+    font-family: 'JetBrains Mono';
+    font-weight: 500;
+    font-size: 20px;
+
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 20px #C692F4;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    transition: transform 0.25s ease-out;
+}
+
+.email-btn:hover, .linkedin-btn:hover, .facebook-btn:hover, .instagram-btn:hover, .github-btn:hover, .tiktok-btn:hover, .contactMe:hover, .linksButton:hover, .grow-link:hover, .portfolio-shortcut:hover{
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.icons{
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.subtitle{
+    color: white;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+}
+
 .section-titles{
     color: white;
     font-family: 'Jersey 10';
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 100px;
-    margin: 0px;
-    margin-top: 200px;
+    line-height: 70px;
+
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 .paragraph{
@@ -150,10 +282,10 @@ header{
     font-weight: 500;
     font-size: 25px;
     line-height: auto;
+
     margin: 0;
     max-width: 800px;
-    margin: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     color: #FFFFFF;
 }
@@ -161,22 +293,50 @@ header{
 footer{
     background: #7B2CBF;
     width: 100%;
-    height: 600px;
+    height: 300px;
 }
 
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
+
     position: fixed;
     left: 0;
     width: 250px;
     height: 100%;
     background-color: #10002B;
+
     transition: transform 0.3s ease-in-out;
     z-index: 1;
     transform: translateX(-100%);
+    z-index: 30;
 }
 
 .sidebar.active{
     transform: translateX(0);
+}
+
+.sidebar a{
+    display: block;
+    color: #FFFFFF;
+    font-family: 'JetBrains Mono';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: auto;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    padding: 20px 25px;
+    transition: background-color 0.2s ease, padding-left 0.2 ease;
+}
+
+.sidebar a:hover{
+    background-color: #7B2CBF;
+    padding-left: 35px;
+    color: #C692F4;
 }
 
 .overlay{
@@ -189,6 +349,7 @@ footer{
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 20;
 }
 
 .overlay.active{
@@ -240,49 +401,3 @@ footer{
         top: 133.6px;
     }
 }
-
-/* Menu Button */
-/*
-position: absolute;
-width: 68px;
-height: 51px;
-left: 13px;
-top: 7px;
-
-*/
-
-/* Menu */
-/*
-position: absolute;
-width: 54px;
-height: 77px;
-left: 6px;
-top: -7px;
-
-background: url(.png);
-
-*/
-
-/* Ellipse 1 */
-/*
-position: absolute;
-width: 265px;
-height: 263px;
-left: 245px;
-top: 286px;
-
-background: #C692F4;
-filter: blur(50px);
-*/
-
-/* Ellipse 2 */
-/*
-position: absolute;
-width: 364px;
-height: 355px;
-left: 73px;
-top: 128px;
-
-background: #7B2CBF;
-filter: blur(50px);
-*/

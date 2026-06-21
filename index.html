@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lianis</title>
-    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <button id="menuButton" class="menuButton">open menu</button>
+        <button id="menuButton" class="menuButton">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
     </header>
     
     <main>
@@ -25,10 +28,10 @@
         <div id="overlay" class="overlay"></div>
 
         <nav id="sidebar" class="sidebar">
-            <a href="#">About Me</a>
-            <a href="#">Links</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact Me</a>
+            <a href="">About Me</a>
+            <a href="">Links</a>
+            <a href="">Portfolio</a>
+            <a href="">Contact Me</a>
         </nav>
 
         <div class="first-section">
@@ -41,12 +44,30 @@
                 <h2 class="title">IT student & Content <br> Creator </h2>
                 <div class="glowing-ellipse2"></div>
                 <div class="glowing-ellipse1"></div>
+
+                            <div class="image-fade-wrapper">
+                <img src="Assets/Adobe Express - file.png" alt="Lianis image" class="faded-base-image">
+                <div class="gradient-overlay"></div>
+            </div>
             </div>
 
             <div class="home-buttons">
-                <button class="contactMe">Contact Me</button>
+                <button id="contact-me-btn" class="contactMe">Contact Me</button>
                 <button class="linksButton">Links</button>
             </div>
+
+            <div class="portfolio-shortcut">
+                <a href="" class="grow-link">
+                    <img src="Assets/112851.png" alt="folder image" class="folder-image grow-img">
+                </a>
+
+                <div class="text-overlay">
+                    <h3 class="text-overlay subtitle">Portfolio</h3>
+                </div>
+            </div>
+
+            
+            
         </div>
         <div class="about-section">
             <h2 class="section-titles">About me</h2>
@@ -57,9 +78,53 @@
             </p>
         </div>
 
-        <div class="contact-section">
+        <div id="contact-section" class="contact-section">
             <h2 class="section-titles">Contact Me</h2>
+            <h3 class="subtitle">Contacts and socials</h3>
             <div class="contacts">
+
+
+                <a href="mailto: lianissrcollab@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons email-btn">
+                        <img src="https://cdn.simpleicons.org/gmail/black" alt="Email" class="icons">
+                        Email
+                    </button>
+                </a>
+
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons linkedin-btn">
+                        <img src="https://api.iconify.design/bi:linkedin.svg?color=black" alt="LinkedIN" class="icons">
+                        LinkedIn
+                    </button>
+                </a>
+
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons github-btn">
+                        <img src="https://cdn.simpleicons.org/github" alt="GitHub" class="icons">
+                        GitHub
+                    </button>
+                </a>
+
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons instagram-btn">
+                        <img src="https://cdn.simpleicons.org/instagram/black" alt="Instagram" class="icons">
+                        Instagram
+                    </button>
+                </a>
+
+                <a href="https://tiktok.com/@lianisss.exe" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons tiktok-btn">
+                        <img src="https://cdn.simpleicons.org/tiktok" alt="TikTok" class="icons">
+                        TikTok
+                    </button>
+                </a>
+
+                <a href="https://www.facebook.com/share/1EesBzHUTu/" target="_blank" rel="noopener noreferrer">
+                    <button class="contact-buttons facebook-btn">
+                    <img src="https://cdn.simpleicons.org/facebook/black" alt="Facebook" class="icons">
+                    Facebook
+                </button>
+                </a>
 
             </div>
         </div>
