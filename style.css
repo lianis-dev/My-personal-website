@@ -41,12 +41,11 @@ header{
 }
 
 .first-block{
+    position: relative;
     display: flex;
     flex-direction: column;
-
     gap: 0px;
     margin-left: 100px;
-    /*margin-top: 150px;*/
     margin-bottom: 10px;
 }
 
@@ -138,26 +137,28 @@ header{
     position: absolute;
     width: 364px;
     height: 345px;
-    left: 600px;
-    top: 200px;
+    left: 0%;
+    top: 0%;
 
     background: #7B2CBF;
     filter: blur(50px);
 
     z-index: -1;
+    pointer-events: none;
 }
 
 .glowing-ellipse2{
     position: absolute;
     width: 265px;
     height: 263px;
-    left: 850px;
-    top: 300px;
+    left: 250px;
+    top: 100px;
 
     background: #C692F4;
     filter: blur(50px);
 
     z-index: -1;
+    pointer-events: none;
 }
 
 .about-section{
@@ -392,20 +393,20 @@ footer{
         font-size: 18px;
         margin: 0px 50px 50px 50px
     }
-        */
 
     .glowing-ellipse1{
+        position: absolute;
+        left: 10%;
         width: 200px;
-        height: 200px;
-        left: 24px;
-        top: 380px;
+        height: 180px;
+        margin: 0;
     }
 
     .glowing-ellipse2{
-        width: 120px;
-        height: 120px;
-        left: 200px;
-        top: 430px;
+        left: 30%;
+        width: 200px;
+        height: 150px;
+        position: absolute;
     }
     
     .contacts{
