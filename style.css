@@ -482,6 +482,12 @@ footer{
     }
 
     .portfolioChoiceBtn{
-
+        background-color: #FFFFFF;
+        height: 400px;
+        width: 300px;
+        border: none;
+        border-radius: 10%;
+        align-items: center;
+        justify-content: center;
     }
 }
